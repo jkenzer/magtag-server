@@ -105,7 +105,7 @@ async function tyler() {
 
 function dateDiffFromToday(futureDate) {
   let today = todayLocalTime();
-  let days = Math.round((futureDate - today) / (1000 * 60 * 60 * 24));
+  let days = Math.ceil((futureDate - today) / (1000 * 60 * 60 * 24));
   return days;
 }
 
