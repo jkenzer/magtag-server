@@ -114,8 +114,8 @@ function dateDiffFromToday(futureDate) {
 
 app.get('/', async (req, res) => {
 
-  // const apps = [joke, showerthought, cleaners, quotes, olympics, josh, mayah, tyler];
-  const apps = [cleaners];
+  const apps = [joke, showerthought, cleaners, quotes, olympics, josh, mayah, tyler];
+  // const apps = [cleaners];
 
   const randomChoice = Math.floor(Math.random() * apps.length);
 
