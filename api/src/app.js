@@ -45,12 +45,14 @@ async function quotes() {
 
 async function cleaners() {
   let startDate = new Date(2021, 03, 08);
+  console.log(startDate);
   let today = todayLocalTime();
+  console.log(today);
   // Thursday = 4
   let currentDay = today.getDay();
   if (currentDay === 4) {
     // it's thursday
-    if (Math.round((today - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
+    if (Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
       return 'Cleaners come today!';
     } else {
       return 'Cleaners come next week.';
@@ -58,7 +60,7 @@ async function cleaners() {
   } else if (currentDay < 4) {
     // thursday is 4 - current Days away
     let nextThursday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + (4 - currentDay));
-    if (Math.round((nextThursday - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
+    if (Math.floor((nextThursday - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
       return `Cleaners come in ${(4- currentDay)} days.`;
     } else {
       return `Cleaners come in ${(4 - currentDay) + 7} days.`;
@@ -68,7 +70,7 @@ async function cleaners() {
     if (currentDay === 5) {
       let nextThursday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 6);
 
-      if (Math.round((nextThursday - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
+      if (Math.floor((nextThursday - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
        return `Cleaners come in 6 days.`;
       } else {
         return `Cleaners come in 13 days.`;
@@ -76,7 +78,7 @@ async function cleaners() {
     } else {
       let nextThursday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5);
 
-      if (Math.round((nextThursday - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
+      if (Math.floor((nextThursday - startDate) / (1000 * 60 * 60 * 24)) % 14 == 0) {
         return `Cleaners come in 5 days.`;
       } else {
         return `Cleaners come in 12 days.`;
@@ -112,7 +114,8 @@ function dateDiffFromToday(futureDate) {
 
 app.get('/', async (req, res) => {
 
-  const apps = [joke, showerthought, cleaners, quotes, olympics, josh, mayah, tyler];
+  // const apps = [joke, showerthought, cleaners, quotes, olympics, josh, mayah, tyler];
+  const apps = [cleaners];
 
   const randomChoice = Math.floor(Math.random() * apps.length);
 
