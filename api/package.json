@@ -1,7 +1,7 @@
 {
-  "name": "express-api-starter",
-  "version": "1.2.0",
-  "description": " A basic starter for an express.js API",
+  "name": "magtag-server",
+  "version": "1.0.0",
+  "description": "Express server to deliver content to my Adafruit Magtag",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -9,11 +9,14 @@
     "lint": "eslint --fix src",
     "test": "mocha --exit"
   },
-  "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "keywords": [
+    "adafruit",
+    "magtag"
+  ],
+  "author": "Josh Kenzer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/jkenzer/magtag-server"
   },
   "license": "MIT",
   "dependencies": {
