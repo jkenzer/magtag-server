@@ -7,8 +7,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 const middlewares = require('./middlewares');
-const api = require('./api');
 
+const SCHEDULE = require('./assets/rising-schedule-2021.json');
 const app = express();
 
 app.use(morgan('dev'));
@@ -126,7 +126,9 @@ app.get('/', async (req, res) => {
   });
 });
 
-app.use('/api/v1', api);
+app.get('/rising', async (req, res) => {
+  res.json(SCHEDULE);
+});
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
