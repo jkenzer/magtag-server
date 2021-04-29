@@ -45,9 +45,7 @@ async function quotes() {
 
 async function cleaners() {
   let startDate = new Date(2021, 03, 08);
-  console.log(startDate);
   let today = todayLocalTime();
-  console.log(today);
   // Thursday = 4
   let currentDay = today.getDay();
   if (currentDay === 4) {
@@ -127,7 +125,23 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/rising', async (req, res) => {
-  res.json(SCHEDULE);
+
+  const today = todayLocalTime();
+  const schedule = SCHEDULE.map(game => {
+    const gameDate = new Date(game.date);
+    if (gameDate >= today) {
+      return game;
+    }
+  });
+
+  let upcoming = schedule.slice(0, 3).map(game => {
+    let location = (game.location == "Home") ? "At home" : "Away";
+    return {
+      message: `${location} against ${game.opponent}, ${game.date.replace(' 2021','')} ${game.time}`
+    }
+  });
+
+  res.json(upcoming);
 });
 
 app.use(middlewares.notFound);
