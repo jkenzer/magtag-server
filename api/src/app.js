@@ -128,16 +128,19 @@ app.get('/rising', async (req, res) => {
 
   const today = todayLocalTime();
   const schedule = SCHEDULE.map(game => {
-    const gameDate = new Date(game.date);
+    let gameDate = new Date(game.date);
+    gameDate.setUTCHours(23,59,0,0)
     if (gameDate >= today) {
       return game;
     }
   });
 
   let upcoming = schedule.slice(0, 3).map(game => {
-    let location = (game.location == "Home") ? "At home" : "Away";
-    return {
-      message: `${location} against ${game.opponent}, ${game.date.replace(' 2021','')} ${game.time}`
+    if (game) {
+      let location = (game.location == "Home") ? "At home" : "Away";
+      return {
+        message: `${location} against ${game.opponent}, ${game.date.replace(' 2021','')} ${game.time}`
+      }
     }
   });
 
