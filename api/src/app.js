@@ -18,8 +18,8 @@ app.use(express.json());
 
 function todayLocalTime() {
   const d = new Date();
-  const offset = (new Date().getTimezoneOffset() / 60) * -1;
-  const n = new Date(d.getTime() + offset);
+  const offset = (new Date().getTimezoneOffset() * 60 * 1000);
+  const n = new Date(d.getTime() - offset);
   return n;
 }
 
@@ -113,7 +113,6 @@ function dateDiffFromToday(futureDate) {
 app.get('/', async (req, res) => {
 
   const apps = [joke, showerthought, cleaners, quotes, olympics, josh, mayah, tyler];
-  // const apps = [cleaners];
 
   const randomChoice = Math.floor(Math.random() * apps.length);
 
@@ -129,7 +128,9 @@ app.get('/rising', async (req, res) => {
   const today = todayLocalTime();
   const schedule = SCHEDULE.reduce((accum, game) => {
     let gameDate = new Date(game.date);
-    gameDate.setUTCHours(23,59,0,0)
+    gameDate.setUTCHours(23, 59, 0, 0)
+    console.log(today);
+    console.log(gameDate);
     if (gameDate >= today) {
       accum.push(game);
       return accum;
