@@ -127,13 +127,16 @@ app.get('/', async (req, res) => {
 app.get('/rising', async (req, res) => {
 
   const today = todayLocalTime();
-  const schedule = SCHEDULE.map(game => {
+  const schedule = SCHEDULE.reduce((accum, game) => {
     let gameDate = new Date(game.date);
     gameDate.setUTCHours(23,59,0,0)
     if (gameDate >= today) {
-      return game;
+      accum.push(game);
+      return accum;
+    } else {
+      return accum;
     }
-  });
+  }, []);
 
   let upcoming = schedule.slice(0, 3).map(game => {
     if (game) {
