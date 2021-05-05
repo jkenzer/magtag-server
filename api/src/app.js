@@ -103,28 +103,7 @@ async function tyler() {
   return `${dateDiffFromToday(tyler)} days till Tyler's Birthday!`;
 }
 
-function dateDiffFromToday(futureDate) {
-  let today = todayLocalTime();
-  let days = Math.ceil((futureDate - today) / (1000 * 60 * 60 * 24));
-  return days;
-}
-
-
-app.get('/', async (req, res) => {
-
-  const apps = [joke, showerthought, cleaners, quotes, olympics, josh, mayah, tyler];
-
-  const randomChoice = Math.floor(Math.random() * apps.length);
-
-  const message = await apps[randomChoice]();
-
-  res.json({
-    message: message
-  });
-});
-
-app.get('/rising', async (req, res) => {
-
+async function rising() {
   const today = todayLocalTime();
   const schedule = SCHEDULE.reduce((accum, game) => {
     let gameDate = new Date(game.date);
@@ -141,13 +120,59 @@ app.get('/rising', async (req, res) => {
 
   let upcoming = schedule.slice(0, 3).map(game => {
     if (game) {
-      let location = (game.location == "Home") ? "At home" : "Away";
+      let location = (game.location == "Home") ? "" : "At ";
       return {
-        message: `${location} against ${game.opponent}, ${game.date.replace(' 2021','')} ${game.time}`
+        message: `${location}${game.opponent}, ${game.date.replace(' 2021','')} ${game.time}`
       }
     }
   });
 
+  return upcoming;
+}
+
+function dateDiffFromToday(futureDate) {
+  let today = todayLocalTime();
+  let days = Math.ceil((futureDate - today) / (1000 * 60 * 60 * 24));
+  return days;
+}
+
+
+app.get('/', async (req, res) => {
+
+  const apps = [
+    joke,
+    joke,
+    showerthought,
+    showerthought,
+    cleaners,
+    quotes,
+    olympics,
+    josh,
+    mayah,
+    tyler,
+    rising,
+    rising,
+    rising,
+  ];
+
+  const randomChoice = Math.floor(Math.random() * apps.length);
+
+  const results = await apps[randomChoice]();
+
+  let message = '';
+  if (typeof (results) === 'object') {
+    message = results[0].message;
+  } else {
+    message = results;
+  }
+  res.json({
+    message: message
+  });
+});
+
+app.get('/rising', async (req, res) => {
+
+  const upcoming = await rising();
   res.json(upcoming);
 });
 
