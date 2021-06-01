@@ -91,8 +91,12 @@ async function olympics() {
   return `Olympics start in ${dateDiffFromToday(olympics)} days. Go USWNT!!!`;
 }
 async function josh() {
-  let josh = new Date(2021, 04, 27);
+  let josh = new Date(2022, 04, 27);
   return `${dateDiffFromToday(josh)} days till Josh's Birthday!`;
+}
+async function amy() {
+  let josh = new Date(2022, 02, 07);
+  return `${dateDiffFromToday(josh)} days till Amy's Birthday!`;
 }
 async function mayah() {
   let mayah = new Date(2021, 06, 08);
@@ -148,11 +152,12 @@ app.get('/', async (req, res) => {
     quotes,
     olympics,
     josh,
+    amy,
     mayah,
     tyler,
     rising,
     rising,
-    rising,
+    // rising,
   ];
 
   const randomChoice = Math.floor(Math.random() * apps.length);
