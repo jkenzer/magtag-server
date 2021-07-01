@@ -1,0 +1,23 @@
+[
+  {
+    "method": "joke"
+  },
+  {
+    "method": "showerthought"
+  },
+  {
+    "method": "quotes"
+  },
+  {
+    "method": "cleaners"
+  },
+  {
+    "method": "rising"
+  },
+  {
+    "method": "date",
+    "title": "Dead Concert",
+    "date": "10/25/2021",
+    "message": "|DATE| till Dead and Co."
+  }
+]

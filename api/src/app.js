@@ -9,6 +9,7 @@ require("dotenv").config();
 const middlewares = require("./middlewares");
 
 const SCHEDULE = require("./assets/rising-schedule-2021.json");
+const RUNTIME = require("./assets/dates.json");
 const app = express();
 
 app.use(morgan("dev"));
@@ -21,6 +22,12 @@ function todayLocalTime() {
   const offset = new Date().getTimezoneOffset() * 60 * 1000;
   const n = new Date(d.getTime() - offset);
   return n;
+}
+
+function dateDiffFromToday(futureDate) {
+  let today = todayLocalTime();
+  let days = Math.ceil((futureDate - today) / (1000 * 60 * 60 * 24));
+  return days;
 }
 
 async function joke() {
@@ -111,25 +118,12 @@ async function cleaners() {
   }
 }
 
-async function olympics() {
-  let olympics = new Date(2021, 06, 25);
-  return `Olympics start in ${dateDiffFromToday(olympics)} days. Go USWNT!!!`;
-}
-async function josh() {
-  let josh = new Date(2022, 04, 27);
-  return `${dateDiffFromToday(josh)} days till Josh's Birthday!`;
-}
-async function amy() {
-  let josh = new Date(2022, 02, 07);
-  return `${dateDiffFromToday(josh)} days till Amy's Birthday!`;
-}
-async function mayah() {
-  let mayah = new Date(2021, 06, 08);
-  return `${dateDiffFromToday(mayah)} days till Mayah's Birthday!`;
-}
-async function tyler() {
-  let tyler = new Date(2022, 05, 07);
-  return `${dateDiffFromToday(tyler)} days till Tyler's Birthday!`;
+
+async function date(dateObj) {
+  let [month, day, year] = dateObj.date.split("/");
+  const dayTill = dateDiffFromToday(new Date(year, month - 1, day));
+  const message = dateObj.message.replace("|DATE|", dayTill + ' days');
+  return `${message}`;
 }
 
 async function rising() {
@@ -162,33 +156,21 @@ async function rising() {
   return upcoming;
 }
 
-function dateDiffFromToday(futureDate) {
-  let today = todayLocalTime();
-  let days = Math.ceil((futureDate - today) / (1000 * 60 * 60 * 24));
-  return days;
-}
-
 app.get("/", async (req, res) => {
-  const apps = [
+
+  const availableFunctions = {
     joke,
-    joke,
-    showerthought,
     showerthought,
     cleaners,
     quotes,
-    olympics,
-    josh,
-    amy,
-    mayah,
-    tyler,
+    date,
     rising,
-    rising,
-    // rising,
-  ];
+  }
 
-  const randomChoice = Math.floor(Math.random() * apps.length);
+  const randomChoice = Math.floor(Math.random() * RUNTIME.length);
 
-  const results = await apps[randomChoice]();
+  const appToRun = RUNTIME[randomChoice]["method"];
+  const results = await availableFunctions[appToRun](RUNTIME[randomChoice]);
 
   let message = "";
   if (typeof results === "object") {
