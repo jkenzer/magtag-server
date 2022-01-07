@@ -165,6 +165,7 @@ app.get("/", async (req, res) => {
     quotes,
     date,
     rising,
+    rising,
   }
 
   const randomChoice = Math.floor(Math.random() * RUNTIME.length);
