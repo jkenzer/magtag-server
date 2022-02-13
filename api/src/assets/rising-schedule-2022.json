@@ -1,14 +1,206 @@
-  [
-    {
-      "location": "Home",
-      "opponent": "Monterey Bay SC",
-      "date": "Sat, March 12, 2022",
-      "time": "7:00 PM"
-    },
-    {
-      "location": "Away",
-      "opponent": "Las Vegas Lights FC",
-      "date": "Sat, March 19, 2022",
-      "time": "7:00 PM"
-    }
-  ]
+[
+  {
+    "date": "Sat, March 12, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Monterey Bay"
+  },
+  {
+    "date": "Sat, March 19, 2022",
+    "time": "7:00 PM",
+    "opponent": "Las Vegas Lights FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, March 26, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "San Diego Loyal"
+  },
+  {
+    "date": "Sat, April 2, 2022",
+    "time": "5:30 PM",
+    "opponent": "San Antonio FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, April 9, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "LA Galaxy II"
+  },
+  {
+    "date": "Sat, April 16, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "New Mexico United"
+  },
+  {
+    "date": "Sat, April 23, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "The Miami FC"
+  },
+  {
+    "date": "Sun, May 1",
+    "time": "5:00 PM",
+    "opponent": "LA Galaxy II",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, May 7, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "San Antonio FC"
+  },
+  {
+    "date": "Sun, May 15, 2022",
+    "time": "5:00 PM",
+    "location": "Home",
+    "opponent": "Tampa Bay Rowdies"
+  },
+  {
+    "date": "Sat, May 21, 2022",
+    "time": "6:00 PM",
+    "opponent": "New Mexico United",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, May 28, 2022",
+    "time": "4:00 PM",
+    "opponent": "Hartford Athletic",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, June 4, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Birmingham Legion FC"
+  },
+  {
+    "date": "Sat, June 11, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "El Paso Locomotive FC"
+  },
+  {
+    "date": "Sat, June 18, 2022",
+    "time": "4:30 PM",
+    "opponent": "Loudoun United FC",
+    "location": "Away"
+  },
+  {
+    "date": "Fri, June 24",
+    "time": "7:30 PM",
+    "opponent": "Las Vegas Lights FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, July 2, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Orange County SC"
+  },
+  {
+    "date": "Sat, July 9, 2022",
+    "time": "5:30 PM",
+    "opponent": "Memphis 901 FC",
+    "location": "Away"
+  },
+  {
+    "date": "Wed, July 20, 2022",
+    "time": "4:00 PM",
+    "opponent": "Louisville City FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, July 23, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Sacramento Republic FC"
+  },
+  {
+    "date": "Wed, July 27, 2022",
+    "time": "7:00 PM",
+    "opponent": "Oakland Roots",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, July 30, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Colorado Springs Switchbacks FC"
+  },
+  {
+    "date": "Sat, August 6, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Las Vegas Lights FC"
+  },
+  {
+    "date": "Fri, August 12",
+    "time": "7:00 PM",
+    "opponent": "Orange County SC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, August 27, 2022",
+    "time": "6:30 PM",
+    "opponent": "El Paso Locomotive FC",
+    "location": "Away"
+  },
+  {
+    "date": "Wed, August 31, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Rio Grande Valley FC"
+  },
+  {
+    "date": "Sat, September 3, 2022",
+    "time": "6:00 PM",
+    "opponent": "Colorado Springs Switchbacks FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, September 10, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Oakland Roots"
+  },
+  {
+    "date": "Sat, September 17, 2022",
+    "time": "7:00 PM",
+    "opponent": "San Diego Loyal",
+    "location": "Away"
+  },
+  {
+    "date": "Wed, September 21, 2022",
+    "time": "7:30 PM",
+    "opponent": "Monterey Bay",
+    "location": "Away"
+  },
+  {
+    "date": "Wed, September 28, 2022",
+    "time": "7:00 PM",
+    "opponent": "Sacramento Republic FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, October 1, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "New York Red Bulls II"
+  },
+  {
+    "date": "Sat, October 8, 2022",
+    "time": "5:30 PM",
+    "opponent": "Rio Grande Valley FC",
+    "location": "Away"
+  },
+  {
+    "date": "Sat, October 15, 2022",
+    "time": "7:30 PM",
+    "location": "Home",
+    "opponent": "Atlanta United 2"
+  }
+]

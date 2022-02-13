@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const middlewares = require("./middlewares");
 
-const SCHEDULE = require("./assets/rising-schedule-2021.json");
+const SCHEDULE = require("./assets/rising-schedule-2022.json");
 const RUNTIME = require("./assets/dates.json");
 const app = express();
 
@@ -146,7 +146,7 @@ async function rising() {
       let location = game.location == "Home" ? "" : "At ";
       return {
         message: `${location}${game.opponent}, ${game.date.replace(
-          " 2021",
+          " 2022",
           ""
         )} ${game.time}`,
       };
