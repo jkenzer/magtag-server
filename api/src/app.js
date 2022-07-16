@@ -121,6 +121,17 @@ async function cleaners() {
 
 async function date(dateObj) {
   let [month, day, year] = dateObj.date.split("/");
+  // Year = 0000 means repeats annually
+  if (year === "0000") {
+    const today = new Date();
+    zeroBasedMonth = month - 1;
+    currentMonth = today.getMonth();
+    if (zeroBasedMonth < currentMonth ||  (zeroBasedMonth == currentMonth && day < today.getDate())) {
+      year = today.getFullYear() + 1;
+    } else {
+      year = today.getFullYear();
+    }
+  }
   const dayTill = dateDiffFromToday(new Date(year, month - 1, day));
   const message = dateObj.message.replace("|DATE|", dayTill + ' days');
   return `${message}`;
