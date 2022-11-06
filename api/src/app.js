@@ -172,7 +172,7 @@ app.get("/", async (req, res) => {
   const availableFunctions = {
     joke,
     showerthought,
-    cleaners,
+    // cleaners,
     quotes,
     date,
     rising,
