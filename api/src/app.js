@@ -133,7 +133,7 @@ async function date(dateObj) {
     }
   }
   const dayTill = dateDiffFromToday(new Date(year, month - 1, day));
-  const message = dateObj.message.replace("|DATE|", dayTill + ' days');
+  const message = dateObj.message.replace("|DATE|", dayTill + ` day${dayTill > 1 ? 's' : ''}`);
   return `${message}`;
 }
 
@@ -175,13 +175,14 @@ app.get("/", async (req, res) => {
     // cleaners,
     quotes,
     date,
-    rising,
-    rising,
+    // rising,
+    // rising,
   }
 
   const randomChoice = Math.floor(Math.random() * RUNTIME.length);
 
   const appToRun = RUNTIME[randomChoice]["method"];
+  console.log(appToRun);
   const results = await availableFunctions[appToRun](RUNTIME[randomChoice]);
 
   let message = "";
