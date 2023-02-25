@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const middlewares = require("./middlewares");
 
-const SCHEDULE = require("./assets/rising-schedule-2022.json");
+const SCHEDULE = require("./assets/rising-schedule-2023.json");
 const RUNTIME = require("./assets/dates.json");
 const app = express();
 
@@ -175,14 +175,15 @@ app.get("/", async (req, res) => {
     // cleaners,
     quotes,
     date,
-    // rising,
-    // rising,
+    rising,
+    rising,
   }
+  // console.log(availableFunctions);
 
   const randomChoice = Math.floor(Math.random() * RUNTIME.length);
 
   const appToRun = RUNTIME[randomChoice]["method"];
-  console.log(appToRun);
+  // console.log('running',appToRun);
   const results = await availableFunctions[appToRun](RUNTIME[randomChoice]);
 
   let message = "";

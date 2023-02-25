@@ -1,0 +1,206 @@
+[
+  {
+    "date": "Sat, Mar 11, 2023",
+    "time": "5:30 PM",
+    "location": "Away",
+    "opponent": "Charleston Battery"
+  },
+  {
+    "date": "Sun, Mar 19, 2023",
+    "time": "3:00 PM",
+    "location": "Away",
+    "opponent": "San Diego Loyal SC"
+  },
+  {
+    "date": "Sat, Apr 1, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "San Diego Loyal SC"
+  },
+  {
+    "date": "Sun, Apr 9, 2023",
+    "time": "2:30 PM",
+    "location": "Away",
+    "opponent": "Birmingham Legion FC"
+  },
+  {
+    "date": "Sat, Apr 15, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Monterey Bay"
+  },
+  {
+    "date": "Sat, Apr 22, 2023",
+    "time": "5:30 PM",
+    "location": "Away",
+    "opponent": "San Antonio FC"
+  },
+  {
+    "date": "Sat, Apr 29, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Loudoun United FC"
+  },
+  {
+    "date": "Sat, May 6, 2023",
+    "time": "4:30 PM",
+    "location": "Away",
+    "opponent": "Tampa Bay Rowdies"
+  },
+  {
+    "date": "Sat, May 13, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Hartford Athletic"
+  },
+  {
+    "date": "Sat, May 20, 2023",
+    "time": "7:00 PM",
+    "location": "Away",
+    "opponent": "Orange County SC"
+  },
+  {
+    "date": "Fri, May 26, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Las Vegas Lights FC"
+  },
+  {
+    "date": "Sat, Jun 3, 2023",
+    "time": "4:00 PM",
+    "location": "Away",
+    "opponent": "Pittsburgh Riverhounds"
+  },
+  {
+    "date": "Sat, Jun 10, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Oakland Roots"
+  },
+  {
+    "date": "Sat, Jun 17, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Louisville City FC"
+  },
+  {
+    "date": "Wed, Jun 21, 2023",
+    "time": "6:00 PM",
+    "location": "Away",
+    "opponent": "New Mexico United"
+  },
+  {
+    "date": "Sat, Jun 24, 2023",
+    "time": "7:00 PM",
+    "location": "Away",
+    "opponent": "Oakland Roots"
+  },
+  {
+    "date": "Sat, Jul 1, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Memphis 901 FC"
+  },
+  {
+    "date": "Fri, Jul 7, 2023",
+    "time": "4:00 PM",
+    "location": "Away",
+    "opponent": "Miami FC"
+  },
+  {
+    "date": "Sat, Jul 22, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Colorado Springs Switchbacks FC"
+  },
+  {
+    "date": "Wed, Jul 26, 2023",
+    "time": "8:00 PM",
+    "location": "Away",
+    "opponent": "Sacramento Republic FC"
+  },
+  {
+    "date": "Sat, Jul 29, 2023",
+    "time": "7:00 PM",
+    "location": "Away",
+    "opponent": "Monterey Bay"
+  },
+  {
+    "date": "Sat, Aug 5, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "San Antonio FC"
+  },
+  {
+    "date": "Sat, Aug 12, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "El Paso Locomotive FC"
+  },
+  {
+    "date": "Sat, Aug 19, 2023",
+    "time": "5:00 PM",
+    "location": "Away",
+    "opponent": "Rio Grande Valley FC Toros"
+  },
+  {
+    "date": "Sat, Aug 26, 2023",
+    "time": "7:30 PM",
+    "location": "Away",
+    "opponent": "Las Vegas Lights FC"
+  },
+  {
+    "date": "Wed, Aug 30, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Sacramento Republic FC"
+  },
+  {
+    "date": "Sat, Sep 2, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Rio Grande Valley FC Toros"
+  },
+  {
+    "date": "Sat, Sep 9, 2023",
+    "time": "5:30 PM",
+    "location": "Away",
+    "opponent": "FC Tulsa"
+  },
+  {
+    "date": "Sat, Sep 16, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Detroit City FC"
+  },
+  {
+    "date": "Wed, Sep 20, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Indy Eleven"
+  },
+  {
+    "date": "Sat, Sep 23, 2023",
+    "time": "6:30 PM",
+    "location": "Away",
+    "opponent": "El Paso Locomotive FC"
+  },
+  {
+    "date": "Sat, Sep 30, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "Orange County SC"
+  },
+  {
+    "date": "Sat, Oct 7, 2023",
+    "time": "6:30 PM",
+    "location": "Home",
+    "opponent": "New Mexico United"
+  },
+  {
+    "date": "Sat, Oct 14, 2023",
+    "time": "5:00 PM",
+    "location": "Away",
+    "opponent": "Colorado Springs Switchbacks FC{"
+  }
+]
